@@ -16,6 +16,7 @@
     <properties>
         <java.version>17</java.version>
     </properties>
+
     <dependencies>
         <!-- Spring Web Dependency for REST API -->
         <dependency>
@@ -51,11 +52,11 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-    
+      <packaging>war</packaging>
     <build>
         <finalName>carpush</finalName>
         <!-- Define WAR packaging -->
-        <packaging>war</packaging>
+      
 
         <plugins>
             <!-- Spring Boot Maven Plugin for WAR Deployment -->

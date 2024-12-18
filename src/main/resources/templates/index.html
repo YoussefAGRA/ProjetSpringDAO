@@ -1,35 +1,71 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Push - Bienvenue</title>
-    <link rel="stylesheet" type="text/css" href="/style.css">
+    <meta name="description" content="Projet JEFF : Location de voitures avec une gestion facile et efficace des véhicules disponibles.">
+    <meta name="author" content="Projet JEFF">
+    <title>CarPush: Location de Voitures</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header style="background-color: #007bff; color: white; padding: 15px; text-align: center;">
-        <h1>Bienvenue sur Car Push</h1>
-        <p>Votre système de gestion de location de voitures de confiance !</p>
+    <!-- En-tête -->
+    <header>
+        <div class="header-content">
+        <h1>Car Push</h1>   
+         <img src="logocar-.png" alt="Logo Projet" class="logo">
+            <nav>
+                <button>Inscription</button>
+                <button>Connexion</button>
+            </nav>
+        </div>
     </header>
 
-    <nav style="text-align: center; margin: 20px 0;">
-        <a href="/voitures" style="margin-right: 15px; text-decoration: none; color: #007bff;">Voir les voitures</a>
-        <a href="/reservations" style="margin-right: 15px; text-decoration: none; color: #007bff;">Gérer les réservations</a>
-        <a href="/a-propos" style="text-decoration: none; color: #007bff;">À propos</a>
-    </nav>
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section Description -->
+        <section class="description">
+            <h2>Description</h2>
+            <p>
+                Découvrez <strong>Car Push</strong>, votre partenaire idéal pour la location de voitures. 
+                Nous mettons à votre disposition une large gamme de véhicules adaptés à tous vos besoins, que ce soit pour un voyage d'affaires, des vacances en famille, ou une escapade en solo. 
+                Profitez d'un service rapide, fiable et d'une expérience client inégalée, avec des options flexibles et des tarifs compétitifs. 
+                Simplifiez vos déplacements avec <strong>Car Push</strong>, où chaque trajet devient un plaisir.
+            </p>
+            
+            <img src="craiyon_123516_bmw_m5.png" alt="Photo de voitures disponibles à la location">
+        </section>
 
-    <main style="padding: 20px; text-align: center;">
-        <img src="/images/location-voiture.jpg" alt="Location de voiture" style="width: 50%; border-radius: 8px;">
-        <h2>Gestion de location de voitures simplifiée</h2>
-        <p>
-            Gérez votre entreprise de location de voitures efficacement avec Car Push. Suivez vos véhicules, gérez vos réservations, 
-            et offrez la meilleure expérience à vos clients.
-        </p>
+        <!-- Section Voitures Disponibles -->
+        <section class="cars-available">
+            <h2>Les Voitures Disponibles que Nous Offrons</h2>
+            <div class="voiture">
+                <h3>2025 Toyota RAV4 PHEV XSE</h3>
+                <p>Un véhicule fiable pour tous vos trajets.</p>
+                <img src="2025_toyota_rav4_phev_xse_supersonicred_0002.avif" alt="Photo de Voiture 1">
+            </div>
+            <div class="voiture">
+                <h3>2022 Kia Stinger</h3>
+                <p>Idéal pour les longues distances et le confort.</p>
+                <img src="kia-stinger-gt2-rwd-2022-739003.webp" alt="Photo de Voiture 2">
+            </div>
+            <div class="voiture">
+                <h3>BMW Z4 roadster</h3>
+                <p>Parfait pour une escapade en ville.</p>
+                <img src="c6c95bc4-3e22-465c-9c72-552f7c6725ec-BMW_Z4_4.webp" alt="Photo de Voiture 3">
+            </div>
+        </section>
     </main>
 
-    <footer style="background-color: #f1f1f1; color: #333; padding: 10px; text-align: center; margin-top: 20px;">
-        &copy; 2024 Car Push. Tous droits réservés.
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Car Push. Tous droits réservés.</p>
+        <ul>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">Conditions d'utilisation</a></li>
+            <li><a href="#">Contactez-nous</a></li>
+        </ul>
     </footer>
 </body>
 </html>
-
