@@ -1,71 +1,250 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projet JEFF : Location de voitures avec une gestion facile et efficace des véhicules disponibles.">
-    <meta name="author" content="Projet JEFF">
-    <title>CarPush: Location de Voitures</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+
+    <link rel="shortcut icon" href="images/" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="scrollbar.css">
+    <link rel="stylesheet" href="querryHome.css">
 </head>
+
 <body>
-    <!-- En-tête -->
     <header>
-        <div class="header-content">
-        <h1>Car Push</h1>   
-         <img src="logocar-.png" alt="Logo Projet" class="logo">
-            <nav>
-                <button>Inscription</button>
-                <button>Connexion</button>
-            </nav>
-        </div>
+        <nav>
+            <div class="navbar">
+                <div class="navbar-img">
+                    <a href="#"><img src="images/logo/logo (4).png" alt="" /></a>
+                </div>
+                <ul class="navbar-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/models.html">Vehicle Models</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+
+                <div class="navbar-buttons">
+                    <a class="navbar-buttons-sign-in" href="#">Sign-In</a>
+                    <a class="navbar-buttons-register" href="#">Register</a>
+                </div>
+                <div class="mobile-hamb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="tabler-icon tabler-icon-menu-2">
+                        <path d="M4 6l16 0"></path>
+                        <path d="M4 12l16 0"></path>
+                        <path d="M4 18l16 0"></path>
+                    </svg>
+                </div>
+            </div>
+        </nav>
     </header>
-
-    <!-- Contenu principal -->
     <main>
-        <!-- Section Description -->
-        <section class="description">
-            <h2>Description</h2>
-            <p>
-                Découvrez <strong>Car Push</strong>, votre partenaire idéal pour la location de voitures. 
-                Nous mettons à votre disposition une large gamme de véhicules adaptés à tous vos besoins, que ce soit pour un voyage d'affaires, des vacances en famille, ou une escapade en solo. 
-                Profitez d'un service rapide, fiable et d'une expérience client inégalée, avec des options flexibles et des tarifs compétitifs. 
-                Simplifiez vos déplacements avec <strong>Car Push</strong>, où chaque trajet devient un plaisir.
-            </p>
-            
-            <img src="craiyon_123516_bmw_m5.png" alt="Photo de voitures disponibles à la location">
-        </section>
-
-        <!-- Section Voitures Disponibles -->
-        <section class="cars-available">
-            <h2>Les Voitures Disponibles que Nous Offrons</h2>
-            <div class="voiture">
-                <h3>2025 Toyota RAV4 PHEV XSE</h3>
-                <p>Un véhicule fiable pour tous vos trajets.</p>
-                <img src="2025_toyota_rav4_phev_xse_supersonicred_0002.avif" alt="Photo de Voiture 1">
-            </div>
-            <div class="voiture">
-                <h3>2022 Kia Stinger</h3>
-                <p>Idéal pour les longues distances et le confort.</p>
-                <img src="kia-stinger-gt2-rwd-2022-739003.webp" alt="Photo de Voiture 2">
-            </div>
-            <div class="voiture">
-                <h3>BMW Z4 roadster</h3>
-                <p>Parfait pour une escapade en ville.</p>
-                <img src="c6c95bc4-3e22-465c-9c72-552f7c6725ec-BMW_Z4_4.webp" alt="Photo de Voiture 3">
+        <section id="home" class="hero-section">
+            <div class="container">
+                <img class="bg-shape" src="images/hero/hero-bg.png" alt="" />
+                <div class="hero-content">
+                    <div class="hero-content-text">
+                        <h4>Plan your trip now</h4>
+                        <h1>Save <span>big</span> with our car rental</h1>
+                        <p>
+                            Rent the car of your dreams. Unbeatable prices, unlimited miles,
+                            flexible pick-up options and much more.
+                        </p>
+                        <div class="hero-content-text-btns">
+                            <a class="hero-content-text-btns-book-ride" href="#">Book Ride &nbsp;<i
+                                    class="fa-regular fa-circle-check"></i></a>
+                            <a class="hero-content-text-btns-learn-more" href="#">Learn More &nbsp; <i
+                                    class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <img class="hero-content-car-img" src="images/hero/main-car.png" alt="" />
+                </div>
             </div>
         </section>
+        <section id="booking-section" class="book-section">
+            <div class="modal-overlay"></div>
+            <div class="container">
+                <div class="book-content">
+                    <div class="book-content-box">
+                        <h2>Book a car</h2>
+                        <p class="error-message">All fields required!</p>
+                        <p class="booking-done">Check your email to confirm an order.</p>
+                        <form class="box-form">
+                            <div class="box-form-car-type">
+                                <label> <i class="fa-solid fa-car"></i> Select Your Car Type <b>*</b></label>
+                                <select>
+                                    <option>Select your car type</option>
+                                    <option value="Audi A1 S-Line">Audi A1 S-Line</option>
+                                    <option value="VW Golf 6">VW Golf 6</option>
+                                    <option value="Toyota Camry">Toyota Camry</option>
+                                    <option value="BMW 320 ModernLine">
+                                        BMW 320 ModernLine
+                                    </option>
+                                    <option value="VW Passat CC">VW Passat CC</option>
+                                </select>
+                            </div>
+                            <div class="box-form-car-type">
+                                <label><i class="fa-solid fa-location-dot"></i> Pick-up <b>*</b> </label>
+                                <select>
+                                    <option>Select pick up location</option>
+                                    <option>Belgrade</option>
+                                    <option>Novi Sad</option>
+                                    <option>Nis</option>
+                                    <option>Kragujevac</option>
+                                    <option>Subotica</option>
+                                </select>
+                            </div>
+                            <div class="box-form-car-type">
+                                <label><i class="fa-solid fa-location-dot"></i> Drop-of <b>*</b></label>
+                                <select>
+                                    <option>Select drop off location</option>
+                                    <option>Novi Sad</option>
+                                    <option>Belgrade</option>
+                                    <option>Nis</option>
+                                    <option>Kragujevac</option>
+                                    <option>Subotica</option>
+                                </select>
+                            </div>
+                            <div class="box-form-car-time">
+                                <label for="picktime"><i class="fa-regular fa-calendar-days"></i> Pick-up
+                                    <b>*</b></label>
+                                <input type="date" id="picktime" />
+                            </div>
+                            <div class="box-form-car-time">
+                                <label for="droptime"><i class="fa-regular fa-calendar-days"></i> Drop-of
+                                    <b>*</b></label>
+                                <input type="date" id="droptime" />
+                            </div>
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pick-section">
+            <div class="container">
+                <div class="pick-container">
+                    <div class="pick-container-title">
+                        <h3>Vehicle Models</h3>
+                        <h2>Our rental fleet</h2>
+                        <p>
+                            Choose from a variety of our amazing vehicles to rent for your
+                            next adventure or business trip
+                        </p>
+                    </div>
+                    <div class="pick-container-car-content">
+                        <div class="pick-box">
+                            <button class="colored-button" id="btn1"
+                                onclick="changeImages('images/cars-big/audia1.jpg')">Audi A1
+                                S-Line</button>
+                            <button class id="btn2" onclick="changeImages('images/cars-big/golf6.jpg')">VW Golf
+                                6</button>
+                            <button class id="btn3" onclick="changeImages('images/cars-big/toyotacamry.jpg')">Toyota
+                                Camry</button>
+                            <button class id="btn4" onclick="changeImages('images/cars-big/bmw320.jpg')">BMW 320
+                                ModernLine</button>
+                            <button class id="btn5" onclick="changeImages('images/cars-big/benz.jpg')">Mercedes-Benz
+                                GLK</button>
+                            <button class id="btn6" onclick="changeImages('images/cars-big/passatcc.jpg')">VW Passat
+                                CC</button>
+                        </div>
+                        <div class="box-cars">
+                            <div class="pick-car">
+                                <img class="pick-img" src="images/cars-big/audia1.jpg" style="display: block" />
+                            </div>
+                            <div class="pick-description">
+                                <div class="pick-description-price">
+                                    <span>$45</span>/ rent per day
+                                </div>
+                                <div class="pick-description-table">
+                                    <div class="pick-description-table-col">
+                                        <span>Model</span>
+                                        <span>Audi</span>
+                                    </div>
+                                    <div class="pick-description-table-col">
+                                        <span>Mark</span>
+                                        <span>A1</span>
+                                    </div>
+                                    <div class="pick-description-table-col">
+                                        <span>Year</span>
+                                        <span>2012</span>
+                                    </div>
+                                    <div class="pick-description-table-col">
+                                        <span>Doors</span>
+                                        <span>4/5</span>
+                                    </div>
+                                    <div class="pick-description-table-col">
+                                        <span>AC</span>
+                                        <span>Yes</span>
+                                    </div>
+                                    <div class="pick-description-table-col">
+                                        <span>Transmission</span>
+                                        <span>Manual</span>
+                                    </div>
+                                    <div class="pick-description-table-col">
+                                        <span>Fuel</span>
+                                        <span>Gasoline</span>
+                                    </div>
+                                    <a class="cta-btn" href="#booking-section">Reserve Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="banner-section">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-content-text">
+                        <h2>Save big with our cheap car rental!</h2>
+                        <p>Top Airports. Local Suppliers. <span>24/7 </span>Support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <ul class="footer-content-1">
+                        <li><span>CAR</span>Rental</li>
+                        <li>We offers a big range of vehicles for all your driving needs. We have the perfect car to
+                            meet your
+                            needs.</li>
+                        <li><i class="fa-solid fa-phone"></i> &nbsp; (123) -456-789</a></li>
+                        <li><i class="fa-solid fa-envelope"></i>&nbsp; carrental@gmail.com</a></li>
+                    </ul>
+                    
+                    <ul class="footer-content-2">
+                        <li>WORKING HOURS</li>
+                        <li>Mon - Fri: 9:00AM - 9:00PM</li>
+                        <li>Sat: 9:00AM - 19:00PM</li>
+                        <li>Sun: Closed</li>
+                    </ul>
+                    <ul class="footer-content-2">
+                        <li>SUBSCRIPTION</li>
+                        <li>
+                            <p>Subscribe your Email address for latest news &amp; updates.</p>
+                        </li>
+                        <li><input type="email" placeholder="Enter Email Address"></li>
+                        <li><button class="submit-email">Submit</button></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </main>
-
-    <!-- Pied de page -->
-    <footer>
-        <p>&copy; 2024 Car Push. Tous droits réservés.</p>
-        <ul>
-            <li><a href="#">Politique de confidentialité</a></li>
-            <li><a href="#">Conditions d'utilisation</a></li>
-            <li><a href="#">Contactez-nous</a></li>
-        </ul>
-    </footer>
+    <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/ca4923168d.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
